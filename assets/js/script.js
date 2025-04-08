@@ -1,3 +1,4 @@
+// Script to show the section details according the link
 let navLinks = document.querySelectorAll('a.inner-link');
 
 navLinks.forEach((item) => {
@@ -17,7 +18,7 @@ document.querySelector('#sidebar .toggle-sidebar').addEventListener('click', fun
 })
 
 
-
+// Showing designation details in home page using typed js
 var options = {
     strings: ['Full Stack Developer', 'Magento Developer'],
     loop: true,
@@ -29,15 +30,16 @@ new Typed('.field h2', options);
 
 
 
+// Showing meteor shower animation in home page using this script
 for (let i = 1; i <= 15; i++) {
     let meteor = document.createElement('span');
-    
+
     meteor.classList = 'meteor'
     document.querySelector('#home .meteor-shower').append(meteor);
 }
 
 
-
+// Shuffle js to shuffle the details in the working tab
 const shuffleInstance = new Shuffle(document.querySelector('#my_work .work-items'), {
     itemSelector: '.item'
 });
@@ -59,6 +61,8 @@ function workFilter() {
 
     shuffleInstance.filter(clickedButtonGroup)
 }
+
+// Dynamically add the details in modal for work details 
 
 var workModal = new bootstrap.Modal(document.getElementById('workModal'))
 const workElements = document.querySelectorAll("#my_work .work-items .wrap");
@@ -89,6 +93,7 @@ workModalElement.addEventListener('hide.bs.modal', function (event) {
 
 
 
+// Script for contact form to add details while focus
 
 let contactFromItems = document.querySelectorAll('#contact_me .form input, #contact_me .form textarea');
 
@@ -105,13 +110,12 @@ contactFromItems.forEach((item) => {
 });
 
 
-// Contact Form Submission
+// Contact Form Submission based on validation
 
 var form = document.getElementById("contact-form");
 
 form.addEventListener("submit", function (event) {
     if (!form.checkValidity()) {
-      // Let browser show default validation messages
       return;
     }
 
@@ -121,5 +125,6 @@ form.addEventListener("submit", function (event) {
     // Show success alert only if valid
     alert("Form submitted successfully!");
 
-    form.reset(); // Clear the form
+    // Clear the form
+    form.reset(); 
   });

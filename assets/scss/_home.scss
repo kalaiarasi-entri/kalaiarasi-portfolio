@@ -87,6 +87,8 @@
         align-items: center;
         justify-content: flex-end;
 
+        // animation for home page image
+
         .image-border {
             display: inline-block;
             --border-angle: 0turn; // For animation.
@@ -132,6 +134,7 @@
         }
     }
 
+    // Animation of meteor shower in home page
     .meteor-shower {
         position: absolute;
         width: 100%;
